@@ -18,7 +18,7 @@ public class AgentService {
                     .setQueryParameter("v", "20150910")
                     .setQueryParameter("query",text)
                     .setQueryParameter("lang", "en")
-                    .setQueryParameter("sessionId", UUID.randomUUID()toString())
+                    .setQueryParameter("sessionId", UUID.randomUUID().toString())
                     .setQueryParameter("timezone", "2017-08-09T03:25:23+0530")
                     .setHeader("Authorization", "Bearer e8a14f93846741d09b487d2825158f5b")
                     .get();
@@ -28,5 +28,6 @@ public class AgentService {
         catch(Exception e){
           e.printStackTrace();
         }
+        return agentResponse;
     }
 }
